@@ -3,6 +3,7 @@
 # Membrane
 **Zero-latency, reversible PII anonymization middleware for LLMs.**
 
+[![CI Status](https://github.com/rishabh-oberoi/membrane-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/roberoi/membrane-ai/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/membrane-ai.svg)](https://pypi.org/project/membrane-ai/)
 [![Downloads](https://img.shields.io/pypi/dm/membrane-ai.svg)](https://pypi.org/project/membrane-ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
