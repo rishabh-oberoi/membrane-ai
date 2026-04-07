@@ -1,0 +1,13 @@
+# Logs
+*.log
+nohup.out
+
+# macOS files
+.DS_Store
+
+# Python build/venv (if not already there)
+venv/
+build/
+dist/
+*.egg-info/
+__pycache__/
