@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "membrane-ai"
-version = "3.1.7"
+version = "3.1.9"
 description = "Enterprise AI privacy middleware — reversible PII anonymization."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
-    { name = "Membrane Open Source", email = "oss@membrane.dev" }
+    { name = "Membrane AI", email = "oss@membrane.dev" }
 ]
 dependencies = [
     "fastapi>=0.110.0",
@@ -19,6 +19,14 @@ dependencies = [
     "httpx>=0.27.0",
     "presidio-analyzer>=2.2.0",
     "spacy>=3.7.0"
+]
+keywords = ["pii", "privacy", "llm", "anonymization", "security", "compliance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Intended Audience :: Developers",
 ]
 
 [project.optional-dependencies]
@@ -29,8 +37,16 @@ anthropic = [
     "anthropic>=0.21.0"
 ]
 
+# This creates the "Project links" sidebar on PyPI
+[project.urls]
+"Homepage" = "https://github.com/rishabh-oberoi/membrane-ai"
+"Source" = "https://github.com/rishabh-oberoi/membrane-ai"
+"Bug Tracker" = "https://github.com/rishabh-oberoi/membrane-ai/issues"
+"Documentation" = "https://github.com/rishabh-oberoi/membrane-ai#readme"
+
 [tool.setuptools]
-packages = ["membrane", "membrane.pii", "membrane.tokenizer", "membrane.llm", "membrane.entity_tracker", "membrane.entity_alignment", "membrane.rehydration"]
+# Automatically find all sub-packages under the membrane folder
+packages = {find = {where = ["."], include = ["membrane*"]}}
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
